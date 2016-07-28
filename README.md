@@ -88,6 +88,8 @@ root@94f6a2fad7f7:/opt/libcap# echo "hello world" > nc 0.0.0.0 8080
 
 ### Example
 
+[Digital Ocean link](https://www.digitalocean.com/community/tutorials/how-to-use-netcat-to-establish-and-test-tcp-and-udp-connections-on-a-vps)
+
 ```
 # TODO
 ```
