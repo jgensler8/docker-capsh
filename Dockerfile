@@ -2,6 +2,7 @@ FROM ubuntu:trusty
 
 RUN apt-get update
 RUN apt-get install -y git make gcc
+RUN rm `which capsh`
 
 # Docs
 # http://man7.org/linux/man-pages/man1/capsh.1.html

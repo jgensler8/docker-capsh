@@ -1,13 +1,19 @@
 sudo: required
 
-language: c
+git:
+  depth: 1
+branches:
+  only:
+  - master
 
 services:
   - docker
 
 before_install:
   - docker build -t capsh .
-
+install: {}
+before_script: {}
+script: {}
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
