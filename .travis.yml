@@ -11,11 +11,12 @@ services:
 
 before_install: {}
 install: {}
-before_script: {}
+before_script:
+  - printenv
 script:
   - docker build -t capsh .
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-    docker push USER/REPO;
+    docker push $DOCKER_USERNAME/$DOCKER_REPO;
     fi
