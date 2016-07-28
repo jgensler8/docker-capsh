@@ -11,8 +11,6 @@ services:
 
 before_install: {}
 install: {}
-before_script:
-  - printenv
 script:
   - docker build -t capsh .
 after_success:
